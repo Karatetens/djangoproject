@@ -1,0 +1,16 @@
+{% extends 'compounds/base.html' %}
+
+{% block content %}
+
+{% for compound_data in compound_data %}
+<article>
+        <time>published: {{ compound_data.published_date }}</time>
+        <h2>{{  compound_data.IUPAC_name }}</h2>
+        <p>{{compound_data.molecular_weight }}</p>
+        <p>{{compound_data.boiling_point }}</p>
+        <p>{{compound_data.melting_point }}</p>
+        <p>{{compound_data.solubility }}</p>
+        <p>{{compound_data.density }}</p>
+    </article>
+{% endfor %}
+{% endblock %}
